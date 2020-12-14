@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  display: flex;
+  height: 300px;
+
+  
+}
+
+.banner_item{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: flex-grow 0.2s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner_item:nth-child(1) {
+  background-color: hsl(124.8,58.8%,54.3%);
+}
+.banner_item:nth-child(2) {
+  background-color: hsl(304.8,58.8%,54.3%);
+}
+.banner_item:nth-child(3) {
+  background-color: hsl(4.8,58.8%,54.3%);
+}
+.banner_item:nth-child(4) {
+  background-color: hsl(184.8,58.8%,54.3%);
+}
+
+.banner_item:hover{
+   flex-grow: 10;
+}
+
+.banner_item:hover .banner_tittle {
+  transform: rotate(0);
+}
+
+.banner_tittle{
+  margin: 0;
+  font-size: 1.2em;
+  color: white;
+  /* font-weight: bold; */
+  transform: rotate(-90deg);
+  transition: transform 0.2s 0.2s;/*propiedad a la que se le aplica el transform, delay, duracion giro*/
+}
+
