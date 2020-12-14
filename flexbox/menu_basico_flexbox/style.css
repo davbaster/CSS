@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.menu {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: steelblue;
+  display: flex !important;
+  /* justify-content: space-around; */
+}
+
+li {
+ flex: auto; /*Todo el ancho del padding se ha distribuido uniformemente en los elementos*/
+ border-right: 1px solid rgba(0, 0,0,.2);
+ text-align: center;
+}
+
+li:last-child{
+  /* border-right-color: #000000 ; */
+  border-right: none;
+}
+
+a {
+  color: #eeeeee;
+  text-decoration: none;
+  line-height: 3;
+  display: block; /*Hce que el hover se vea en todo el cuadro, no solo el link*/
+  font-weight: bold;
+  font-size: .9em;
+
+}
+
+a:hover {
+  background: rgba(0, 0,0,.2);
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+   
+  }
+
+  .menu li {
+    flex: auto;
+    border-bottom: 1px solid rgba(0, 0,0,.2);
+  }
+
+  li:last-child {
+    border: none;
+  }
+  a {
+    color: #eeeeee;
+    text-decoration: none;
+    line-height: 3;
+    /* display: block; */
+    padding-left: 1em;
+    font-weight: bold;
+    font-size: .9em;
+  }
+
+  a:hover {
+    background: rgba(0, 0,0,.2);
+  }
+}
+
+#toggle-menu {
+  /* background: darken(steelblue, 5%); */
+  background: rgb(62, 127, 180);
+  line-height: 2.5;
+  color: #ffffff;
+  padding-left: 1em;
+  font-size: .9em;
+  cursor: pointer;
+  /* display: flex !important; */
+}
+
+@media screen and (min-width: 601px){
+
+  #toggle-menu {
+    display: none;
+  }
+
+}
